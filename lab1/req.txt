@@ -1,0 +1,28 @@
+Note: You can work in groups of 2. In that case only 1 member should deliver the assignment and attach a text file containing the names of the 2 students in the group.
+If anyone didn't find someone to work with, they should work alone and we will take their case into consideration while grading.
+Deliverables:
+1- Module: Carry Select Adder (CSA).
+2- Module: Carry Select Adder Test-bench.
+
+FAQs:
+- What is the CSA width? 16-bits.
+- What is the width of the internal adders? 4-bits each.
+- What are the inputs and outputs of the CSA? Inputs: A&B (both are 16-bits), Cin (1-bit). Outputs: Cout (1-bit), Sum (16-bits).
+- What files should we deliver? The files that has the extension ".v" that contains your code.
+
+Note:
+The test-bench must contain multiple test cases that test the correct propagation of auxiliary carry between different selectors.
+DO NOT loop over all possible combinations of the inputs since it doesn't make sense for a human to check a huge number of test cases.
+Think about the components of your module and how they operate then think about testcases that can find errors in these components.
+For example, in the CSA, the part that is most prone to error is the multiplexer that picks a result based on the previous carry. This part is where we are most likely to fall into some mistakes while writing the code (such as typing the wrong wire name). So try to create test cases that would try 0 once and 1 once for each internal carry.
+That means that you may need nearly 8 test cases (can be more if you wish).
+
+Hints:
+- For regular adders, use the "+" operators.
+- If you add N-bits with N-bits using "+", you can receive the output in N+1-bits where the most significant bit is the carry.
+- CSA is a combinational circuit so there is no reason to use "always". If you find yourself wanting to use it, you're probably overcomplicating the problem.
+- If you don't use always in the CSA (as mentioned above), then there is also no reason to define anything as "reg"; you should only need "wire" variables.
+- Remember that "initial" and delays "#" belong to the test-bench. Don't use them in the CSA module.
+- IMPORTANT: Read the lab slides (introduction to verilog slides and continous assignment from the combinational circuits slides) before starting to solve the requirement. This will save you a lot of time.
+
+Note: The lab should take less than 2 hours. No need to pressure yourself to finish it in 2 hours but if you find that it is taking a lot of time, then you're probably overcomplicating it.

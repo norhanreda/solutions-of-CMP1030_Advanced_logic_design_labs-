@@ -1,0 +1,17 @@
+Note: You can work in groups of 2. In that case only 1 member should deliver the assignment and attach a text file containing the names of the 2 students in the group. If anyone didn't find someone to work with, they should work alone and we will take their case into consideration while grading.
+Deliverables:
+- 8 Verilog files (4 modules and their corresponding test benches)
+- 1 PDF file with the simulation captures for each test bench.
+
+FAQs:
+- Should we create the 4x4 multiplier from scratch? It is not required to create it from scratch; you can just use the "*" operator.
+- How should we create the Binary to BCD converter? Use the "shift-add-3" algorithm defined in the document.
+- Can we use division and modulus for the conversion instead of the "shift-add-3" algorithm? NO.
+- What is order of the bits corresponding to each LED in the 7-Segment Display? Use the order shown in the figure in page 5.
+- What files should we deliver? The files that has the extension ".v" that contains your code + the PDF report.
+
+- What test cases should I cover? Don't limit your test cases to a small part of the input space. For example, don't just use small numbers to test the binary to BCD converter, try to test numbers in units, tens and hundreds. For this requirement, the input space is small; so if you wish, you can loop over all the possible inputs and test them.
+
+Hints:
+- The result of multiplying N bits with M bits is (N+M) bits.
+- Similar to the previous requirement, the modules in this requirement are combinational circuits so there is no reason to use "always" in them. If you find yourself wanting to use it, you're probably overcomplicating the problem.
