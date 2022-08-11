@@ -1,0 +1,29 @@
+Note: You can work in groups of 2. In that case only 1 member should deliver the assignment and attach a text file containing the names of the 2 students in the group. If anyone didn't find someone to work with, they should work alone and we will take their case into consideration while grading.
+
+Deliverables:
+1- Module: Randomizer.
+2- Module: Randomizer "Self-Checking" Test-bench.
+
+The test-bench must contain the test case shown in the document.
+
+FAQs:
+- What is a Self-Checking Test-bench? It is a test bench that enters the test cases and checks the output to see if it matches the expected output. If all the actual outputs matches their corresponding expected outputs, it will tell the user that the test was a success (e.g. via display). Otherwise, it would tell them it was a failure.
+- What is the Randomizer Shift-Register size? 15-bits.
+- Should we make a separate Shift-Register module? Not required. You can either write it directly in the randomizer or split it in a separate module then use it in the randomizer.
+- How many bits does the randomizer receive at each clock cycle? 1-bit only.
+- How many bits does the randomizer output at each clock cycle? 1-bit only.
+- But the test case is 96-bits, how can I send it to the randomizer? bit-by-bit over 96 clock cycles.
+- What is the direction of the shift-register in the randomizer? It shift from 1 to 15. So the bit in location 1 will go to location 2 and the bit in location 2 will go to location 3 and so on.
+- What are the inputs of the Randomizer? Clock, Reset, Enable, Load and DataIn (1-bit each), Seed (15-bits).
+- What are the outputs of the Randomizer? DataOut (1-bit).
+- What does "Enable" do? if "Enable" is 0, the register will not shift when the clock positive edge arrives.
+- What does "Load" and "Seed" do? if "Load" is 1, the value "Seed" will replace the current value in the shift-register when the clock positive edge arrives.
+- When "Reset" is 1, what will happen? You should set the shift-register to be 0.
+- What files should we deliver? The files that has the extension ".v" that contains your code.
+
+Hints:
+- Try to use a for loop in the test bench to loop over the testcase.
+- There is a table in the document that shows how the output at each clock cycle is generated.
+- Note that the first output should be read before any shifting happens.
+
+Note: The lab should take 2 hours or less
